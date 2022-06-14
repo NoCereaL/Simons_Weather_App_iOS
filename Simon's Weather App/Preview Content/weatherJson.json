@@ -1,0 +1,109 @@
+
+{
+    "Headline": {
+        "EffectiveDate": "2022-06-18T08:00:00+01:00",
+        "EffectiveEpochDate": 1655535600,
+        "Severity": 4,
+        "Text": "Thunderstorms Saturday",
+        "Category": "thunderstorm",
+        "EndDate": "2022-06-18T20:00:00+01:00",
+        "EndEpochDate": 1655578800,
+        "MobileLink": "http://www.accuweather.com/en/gb/london/ec4a-2/daily-weather-forecast/328328?lang=en-us",
+        "Link": "http://www.accuweather.com/en/gb/london/ec4a-2/daily-weather-forecast/328328?lang=en-us"
+    },
+    "DailyForecasts": [
+        {
+            "Date": "2022-06-14T07:00:00+01:00",
+            "EpochDate": 1655186400,
+            "Temperature": {
+                "Minimum": {
+                    "Value": 53,
+                    "Unit": "F",
+                    "UnitType": 18
+                },
+                "Maximum": {
+                    "Value": 74,
+                    "Unit": "F",
+                    "UnitType": 18
+                }
+            },
+            "Day": {
+                "Icon": 1,
+                "IconPhrase": "Sunny",
+                "HasPrecipitation": false
+            },
+            "Night": {
+                "Icon": 34,
+                "IconPhrase": "Mostly clear",
+                "HasPrecipitation": false
+            },
+            "Sources": [
+                "AccuWeather"
+            ],
+            "MobileLink": "http://www.accuweather.com/en/gb/london/ec4a-2/daily-weather-forecast/328328?day=1&lang=en-us",
+            "Link": "http://www.accuweather.com/en/gb/london/ec4a-2/daily-weather-forecast/328328?day=1&lang=en-us"
+        },
+        {
+            "Date": "2022-06-15T07:00:00+01:00",
+            "EpochDate": 1655272800,
+            "Temperature": {
+                "Minimum": {
+                    "Value": 57,
+                    "Unit": "F",
+                    "UnitType": 18
+                },
+                "Maximum": {
+                    "Value": 77,
+                    "Unit": "F",
+                    "UnitType": 18
+                }
+            },
+            "Day": {
+                "Icon": 3,
+                "IconPhrase": "Partly sunny",
+                "HasPrecipitation": false
+            },
+            "Night": {
+                "Icon": 34,
+                "IconPhrase": "Mostly clear",
+                "HasPrecipitation": false
+            },
+            "Sources": [
+                "AccuWeather"
+            ],
+            "MobileLink": "http://www.accuweather.com/en/gb/london/ec4a-2/daily-weather-forecast/328328?day=2&lang=en-us",
+            "Link": "http://www.accuweather.com/en/gb/london/ec4a-2/daily-weather-forecast/328328?day=2&lang=en-us"
+        },
+        {
+            "Date": "2022-06-16T07:00:00+01:00",
+            "EpochDate": 1655359200,
+            "Temperature": {
+                "Minimum": {
+                    "Value": 61,
+                    "Unit": "F",
+                    "UnitType": 18
+                },
+                "Maximum": {
+                    "Value": 80,
+                    "Unit": "F",
+                    "UnitType": 18
+                }
+            },
+            "Day": {
+                "Icon": 4,
+                "IconPhrase": "Intermittent clouds",
+                "HasPrecipitation": false
+            },
+            "Night": {
+                "Icon": 35,
+                "IconPhrase": "Partly cloudy",
+                "HasPrecipitation": false
+            },
+            "Sources": [
+                "AccuWeather"
+            ],
+            "MobileLink": "http://www.accuweather.com/en/gb/london/ec4a-2/daily-weather-forecast/328328?day=3&lang=en-us",
+            "Link": "http://www.accuweather.com/en/gb/london/ec4a-2/daily-weather-forecast/328328?day=3&lang=en-us"
+        }
+    ]
+}
