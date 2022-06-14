@@ -7,8 +7,10 @@
 
 import Foundation
 
+//Extension so we acn access it throughout project
 extension Double{
-    func roundedDouble() -> String{
+    //Function Returns String by converting Integer to String rounded by 1dp
+    func roundedNum() -> String{
         return String(format: "%.0f", self)
     }
 }

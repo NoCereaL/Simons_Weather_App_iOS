@@ -9,7 +9,13 @@ import SwiftUI
 
 struct LoadingScreen: View {
     var body: some View {
-        ProgressView().progressViewStyle(CircularProgressViewStyle(tint: .red)).frame(maxWidth: .infinity, maxHeight: .infinity)
+        VStack{
+            Spacer()
+            Spacer()
+            Text("Please Be Patient While We Fetch Weather Data!").fontWeight(.semibold).multilineTextAlignment(.center).padding(20.0)
+            
+            ProgressView().progressViewStyle(CircularProgressViewStyle(tint: .red)).frame(maxWidth: .infinity, maxHeight: .infinity)
+        }
     }
 }
 

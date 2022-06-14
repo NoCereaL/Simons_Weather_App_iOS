@@ -8,16 +8,16 @@
 import SwiftUI
 
 struct ContentView: View {
-    @StateObject var locationManager = LocationHandler()
+    @StateObject var locationHandler = LocationHandler()
     var weatherHandler = WeatherHandler()
     @State var  weather: ResponseHandler?
         
     var body: some View {
         VStack{
             
-            if let location = locationManager.location{
+            if let location = locationHandler.location{
                 if let weather = weather {
-                    WeatherInfoScreen(weather: weather)
+                    WeatherInfoScreen()
                 }
                 else {
                     LoadingScreen().task {
@@ -30,10 +30,10 @@ struct ContentView: View {
                 }
             }
             else {
-                if locationManager.isLoading {
+                if locationHandler.isLoading {
                     LoadingScreen()
                 } else{
-                    StartScreen().environmentObject(locationManager)
+                    StartScreen().environmentObject(locationHandler)
                 }
             }
             
@@ -65,7 +65,9 @@ struct TabWindowOne: View{
 struct TabWindowTwo: View{
     var body: some View{
         VStack{
-            Text("Enter Your API Key Here:").font(.system(size: 20).bold()).padding(20.0)
+            Text("This Application is intended for test purposes & examination only ").font(.system(size: 20).bold()).multilineTextAlignment(.center).padding(20.0)
+            
+            Text("Proceed by Swiping ->").font(.system(size: 20).bold()).padding(20.0)
         }
     }
 }
@@ -74,5 +76,6 @@ struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
         ContentView()
         TabbedView()
+        TabWindowTwo()
     }
 }

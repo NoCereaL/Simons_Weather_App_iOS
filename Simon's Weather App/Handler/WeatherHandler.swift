@@ -10,7 +10,10 @@ import CoreLocation
 
 class WeatherHandler{
     func getCurrentWeather(latitude: CLLocationDegrees, longitude: CLLocationDegrees) async throws -> ResponseHandler{
-        guard let url = URL(string: "https://api.openweathermap.org/data/2.5/weather?lat=\(latitude)&lon=\(longitude)&appid=\("8fc9c0b0cd9535aed2b765e6d3f612d2")&units=metric")
+
+        //API Url string
+        //You can replace the API Key in the Braces Bellow
+        guard let url = URL(string: "https://dataservice.accuweather.com/forecasts/v1/daily/5day/328328?apikey=\("GoHEEUY25jZQnE8lnhRB7zGTAWJe2SBO")")
         else{
             fatalError("URL is Missing")
         }
@@ -24,22 +27,26 @@ class WeatherHandler{
             fatalError("Error Getting Weather Data")
         }
         
+        //Decode Json File
        let decodedData = try JSONDecoder().decode(ResponseHandler.self, from: data)
         
+        //Function Will Return Decoded Data from urlResponse
         return decodedData
     }
 }
 
-
+//Decode Json Objects from urlResponse
+//Tested using weatherJson.json file and WeatherInfoScreen Preview
 struct ResponseHandler: Decodable{
     var Headline: HeadlineResponse
-    var DailyForecasts: [DailyForecastResponse]
+    var DailyForecasts: [DailyForecastResponse]     //DailyForecasts is an Array containing forecasts objects for each day
     
+    //Headline Objects
     struct HeadlineResponse: Decodable{
         var Text: String
     }
     
-    
+    //DailyForecasts Objects
     struct DailyForecastResponse: Decodable{
         var Date: String
         var Temperature: TemperatureResponse
